@@ -85,8 +85,9 @@ img{max-width:100%;display:block}
 
 /* ---- scene 1: stadium night ---- */
 .snow{animation:fall 16s linear infinite}
-.snow-fast{animation:fall 9s linear infinite;animation-delay:-4s}
+.snow-fast{animation:fall-offset 9s linear infinite;animation-delay:-4s}
 @keyframes fall{to{transform:translateY(810px)}}
+@keyframes fall-offset{from{transform:translate(37px,0)}to{transform:translate(37px,810px)}}
 .lamp{animation:lampGlow 4s ease-in-out infinite}
 .lamp:nth-of-type(2n){animation-delay:1.3s}
 .lamp:nth-of-type(3n){animation-delay:2.2s}
