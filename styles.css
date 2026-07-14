@@ -7,6 +7,8 @@
   --ink:#020617;
   --orange:#F97415;
   --orange-deep:#DD5F04;
+  --orange-text:#A34400;
+  --orange-text-dark:#7C3400;
   --paper:#F8FAFC;
   --mute:#44565C;
   --line:#A8CDD4;
@@ -44,7 +46,7 @@ img{max-width:100%;display:block}
   letter-spacing:1.2px;text-transform:uppercase;
   transition:color .15s;
 }
-.nav-links a:hover{color:var(--orange)}
+.nav-links a:hover{color:var(--orange-text)}
 .nav-links a.cta{
   color:var(--paper);background:var(--orange);
   padding:10px 22px;border-radius:999px;
@@ -136,7 +138,7 @@ img{max-width:100%;display:block}
 .section.alt{background:var(--bg-soft)}
 .eyebrow{
   font-weight:700;letter-spacing:3px;text-transform:uppercase;
-  color:var(--orange);font-size:13px;text-align:center;margin-bottom:12px;
+  color:var(--orange-text);font-size:13px;text-align:center;margin-bottom:12px;
 }
 .section h2{
   font-family:var(--disp);font-weight:400;text-transform:uppercase;text-align:center;
@@ -151,8 +153,8 @@ img{max-width:100%;display:block}
   font-size:clamp(22px,2.6vw,30px);letter-spacing:1px;margin-bottom:14px;
 }
 .trio-item p{color:var(--mute);margin-bottom:6px}
-.trio-item a{color:var(--orange);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-.trio-item a:hover{color:var(--orange-deep)}
+.trio-item a{color:var(--orange-text);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.trio-item a:hover{color:var(--orange-text-dark)}
 
 /* ---- contact form ---- */
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:680px;margin:0 auto}
@@ -172,7 +174,7 @@ img{max-width:100%;display:block}
   font-family:var(--disp);font-weight:400;text-transform:uppercase;
   font-size:clamp(32px,5.5vw,60px);line-height:1.12;letter-spacing:1px;
 }
-.hero h1 .accent{color:var(--orange)}
+.hero h1 .accent{color:var(--orange-text)}
 .hero .sub{margin:22px auto 0;max-width:680px;color:var(--mute);font-size:clamp(16px,2.2vw,19px)}
 .hero-cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
@@ -181,7 +183,7 @@ img{max-width:100%;display:block}
   background:#fff;border:1px solid var(--line);border-radius:14px;
   padding:30px;margin-bottom:18px;
 }
-.product .tag{font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);font-size:13px;margin-bottom:6px}
+.product .tag{font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange-text);font-size:13px;margin-bottom:6px}
 .product h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:21px;letter-spacing:.5px;margin-bottom:10px}
 .product p{color:#26343a;margin-bottom:10px}
 .product .feat{color:var(--mute);font-size:15px}
@@ -206,13 +208,13 @@ img{max-width:100%;display:block}
 /* ---- footer ---- */
 .foot{border-top:1px solid var(--line);padding:42px 0;text-align:center;background:var(--bg-soft)}
 .foot-logo{height:44px;width:auto;margin:0 auto 18px}
-.foot a:hover{color:var(--orange)}
+.foot a:hover{color:var(--orange-text)}
 .foot .links{
   display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;
   font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:13px;
 }
 .foot .small{color:var(--mute);font-size:14px}
-.foot .small a{color:var(--orange-deep);text-decoration:underline;text-underline-offset:3px}
+.foot .small a{color:var(--orange-text);text-decoration:underline;text-underline-offset:3px}
 
 /* ---- responsive ---- */
 @media(max-width:780px){
