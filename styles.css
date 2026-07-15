@@ -144,7 +144,17 @@ img{max-width:100%;display:block}
 }
 .product .tag{font-family:var(--disp);font-weight:600;letter-spacing:2px;text-transform:uppercase;
   color:var(--orange);font-size:13px;margin-bottom:6px}
+.product-logo{height:36px;width:auto;margin-bottom:14px}
 .product h3{font-family:var(--disp);font-weight:700;font-size:22px;margin-bottom:10px}
+
+/* per-app brand colors (sampled from the app logos) */
+.c-pro{color:#F87010}
+.c-lite{color:#4070C0}
+.c-pa{color:#F8D800}
+.c-dj{color:#00B0D0}
+.c-ad{color:#8858F0}
+.c-rm{color:#10B880}
+.c-bc{color:#20C058}
 .product p{color:#d2d2d2;margin-bottom:10px}
 .product .feat{color:var(--mute);font-size:15px}
 .product .feat strong{color:#e6e6e6}
