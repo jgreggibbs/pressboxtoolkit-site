@@ -1,0 +1,21 @@
+# Press Box Toolkit — all crawlers welcome, including AI assistants
+User-agent: *
+Allow: /
+
+# AI search / assistant crawlers (explicitly welcomed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.pressboxtoolkit.com/sitemap.xml

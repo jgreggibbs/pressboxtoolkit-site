@@ -1,0 +1,26 @@
+# Press Box Toolkit
+
+> Press Box Toolkit is an all-in-one web platform for high school game-day operations: rosters, sponsor reads, game scripts, and audio in one place. It is built for PA announcers, DJs, athletic directors, booster clubs, and the volunteer crews who run the press box.
+
+Press Box Toolkit runs in the browser and keeps data and audio on the user's device, so it works even with weak press box internet. It is designed around volunteer turnover: when one announcer or parent moves on, the next inherits a complete working system of rosters, rundown templates, sponsor scripts, and audio libraries.
+
+## Products
+
+- [Press Box PRO](https://www.pressboxtoolkit.com/details.html): The all-in-one press box command center. Combines roster management, sponsor tracking, audio playback, and live rundown execution in a single dashboard for solo operators who run the whole show.
+- [Press Box LITE](https://www.pressboxtoolkit.com/details.html): A streamlined game-day toolkit for fast setup. Perfect for athletic directors, volunteer announcers, and booster club parents who wear multiple hats on game day.
+- [Press Box PA](https://www.pressboxtoolkit.com/details.html): PA announcer rundowns organized by game phase, with announcement scripts, sponsor reads, and task tracking.
+- [Press Box DJ](https://www.pressboxtoolkit.com/details.html): Game-day audio with phase-organized cards, one-click playback, crossfade controls, and a soundboard.
+- [Press Box AD](https://www.pressboxtoolkit.com/details.html): Athletic director tools for roster import and export to systems like MaxPreps, Hudl, and Blackbaud.
+- [Press Box RM](https://www.pressboxtoolkit.com/details.html): Lightweight roster management with starter/captain toggles and real-time substitution tracking.
+- [Press Box BC](https://www.pressboxtoolkit.com/details.html): Booster club volunteer task assignment with game schedules and recurring assignments.
+
+## Pages
+
+- [Home](https://www.pressboxtoolkit.com/): Overview and contact.
+- [Learn More](https://www.pressboxtoolkit.com/details.html): Full product family details.
+- [App](https://app.pressboxtoolkit.com): Create an account and try Press Box Toolkit.
+
+## Contact
+
+- Email: info@pressboxtoolkit.com
+- LinkedIn: https://www.linkedin.com/company/press-box-toolkit-llc
