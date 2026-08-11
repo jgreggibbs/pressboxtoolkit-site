@@ -10,9 +10,9 @@ Press Box Toolkit runs in the browser and keeps data and audio on the user's dev
 - [Press Box LITE](https://www.pressboxtoolkit.com/details.html): A streamlined game-day toolkit for fast setup. Perfect for athletic directors, volunteer announcers, and booster club parents who wear multiple hats on game day.
 - [Press Box PA](https://www.pressboxtoolkit.com/details.html): PA announcer rundowns organized by game phase, with announcement scripts, sponsor reads, and task tracking.
 - [Press Box DJ](https://www.pressboxtoolkit.com/details.html): Game-day audio with phase-organized cards, one-click playback, crossfade controls, and a soundboard.
-- [Press Box AD](https://www.pressboxtoolkit.com/details.html): Athletic director tools for roster import and export to systems like MaxPreps, Hudl, and Blackbaud.
 - [Press Box RM](https://www.pressboxtoolkit.com/details.html): Lightweight roster management with starter/captain toggles and real-time substitution tracking.
-- [Press Box BC](https://www.pressboxtoolkit.com/details.html): Booster club volunteer task assignment with game schedules and recurring assignments.
+- [Press Box AD](https://www.pressboxtoolkit.com/details.html): Athletic director tools for roster import and export to systems like MaxPreps, Hudl, and Blackbaud.
+- [Press Box BC](https://www.pressboxtoolkit.com/details.html): Booster club operations: volunteer task assignment with game schedules and recurring assignments, sponsorship tiers with payment tracking, per-game concession inventory, and merchandise sales with variant-level stock.
 
 ## Pages
 
