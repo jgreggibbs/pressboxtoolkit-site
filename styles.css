@@ -69,7 +69,7 @@ img{max-width:100%;display:block}
 .hero h1{
   font-family:var(--disp);font-weight:700;
   font-size:clamp(30px,5vw,52px);line-height:1.05;
-  letter-spacing:.5px;position:relative;
+  letter-spacing:.5px;text-transform:uppercase;position:relative;
 }
 .hero h1 .accent{color:var(--orange)}
 .hero .sub{
@@ -96,7 +96,7 @@ img{max-width:100%;display:block}
   color:var(--orange);font-size:13px;text-align:center;margin-bottom:12px;
 }
 .section h2{
-  font-family:var(--disp);font-weight:700;text-align:center;
+  font-family:var(--disp);font-weight:700;text-align:center;text-transform:uppercase;
   font-size:clamp(26px,4vw,38px);line-height:1.1;margin-bottom:14px;
 }
 .section .lede{text-align:center;color:#cfcfcf;max-width:680px;margin:0 auto 44px;font-size:18px}
@@ -145,7 +145,7 @@ img{max-width:100%;display:block}
 .product .tag{font-family:var(--disp);font-weight:600;letter-spacing:2px;text-transform:uppercase;
   color:var(--orange);font-size:13px;margin-bottom:6px}
 .product-logo{height:36px;width:auto;margin-bottom:14px}
-.product h3{font-family:var(--disp);font-weight:700;font-size:22px;margin-bottom:10px}
+.product h3{font-family:var(--disp);font-weight:700;font-size:22px;text-transform:uppercase;margin-bottom:10px}
 
 /* per-app brand colors (sampled from the app logos) */
 .c-pro{color:#F87010}
@@ -167,7 +167,7 @@ img{max-width:100%;display:block}
   text-align:center;padding:64px 24px;
   background:linear-gradient(120deg,var(--orange-deep),var(--orange) 55%,var(--orange-lt));
 }
-.cta-band h2{font-family:var(--disp);font-weight:700;color:var(--ink);
+.cta-band h2{font-family:var(--disp);font-weight:700;color:var(--ink);text-transform:uppercase;
   font-size:clamp(26px,4vw,40px);margin-bottom:22px}
 .cta-band .btn-dark{background:var(--ink);color:var(--paper);font-size:16px;padding:15px 32px}
 .cta-band .btn-dark:hover{background:#000;transform:translateY(-2px)}
