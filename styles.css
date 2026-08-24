@@ -1,5 +1,5 @@
 /* ===== Press Box Toolkit — landing site ===== */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root{
   --ink:#121212;
@@ -11,8 +11,8 @@
   --paper:#ffffff;
   --mute:#9a9a9a;
   --line:#2c2c2c;
-  --disp:'Oswald',system-ui,sans-serif;
-  --body:'Barlow Semi Condensed',system-ui,sans-serif;
+  --disp:'Anton',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,sans-serif;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -41,7 +41,7 @@ img{max-width:100%;display:block}
 .nav-logo{height:34px;width:auto}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{
-  font-family:var(--disp);font-weight:500;font-size:15px;
+  font-family:var(--disp);font-weight:400;font-size:15px;
   letter-spacing:1.5px;text-transform:uppercase;color:#d8d8d8;
   transition:color .15s;
 }
@@ -67,7 +67,7 @@ img{max-width:100%;display:block}
 }
 .hero-logo{height:120px;width:auto;margin:0 auto 28px;position:relative}
 .hero h1{
-  font-family:var(--disp);font-weight:700;
+  font-family:var(--disp);font-weight:400;
   font-size:clamp(30px,5vw,52px);line-height:1.05;
   letter-spacing:.5px;text-transform:uppercase;position:relative;
 }
@@ -79,7 +79,7 @@ img{max-width:100%;display:block}
 .hero-cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
 
 .btn{
-  font-family:var(--disp);font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  font-family:var(--disp);font-weight:400;letter-spacing:1px;text-transform:uppercase;
   font-size:15px;padding:13px 26px;border-radius:7px;cursor:pointer;
   transition:transform .12s, background .15s;display:inline-block;
 }
@@ -92,11 +92,11 @@ img{max-width:100%;display:block}
 .section{padding:72px 0}
 .section.alt{background:var(--ink-soft)}
 .eyebrow{
-  font-family:var(--disp);font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  font-family:var(--disp);font-weight:400;letter-spacing:3px;text-transform:uppercase;
   color:var(--orange);font-size:13px;text-align:center;margin-bottom:12px;
 }
 .section h2{
-  font-family:var(--disp);font-weight:700;text-align:center;text-transform:uppercase;
+  font-family:var(--disp);font-weight:400;text-align:center;text-transform:uppercase;
   font-size:clamp(26px,4vw,38px);line-height:1.1;margin-bottom:14px;
 }
 .section .lede{text-align:center;color:#cfcfcf;max-width:680px;margin:0 auto 44px;font-size:18px}
@@ -111,8 +111,8 @@ img{max-width:100%;display:block}
   position:absolute;top:0;left:26px;right:26px}
 .card-ic{width:54px;height:54px;flex:0 0 54px;object-fit:contain}
 .card-arrow{width:54px;height:54px;flex:0 0 54px;display:flex;align-items:center;justify-content:center;
-  font-family:var(--disp);font-size:42px;color:var(--orange);font-weight:700}
-.card h3{font-family:var(--disp);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  font-family:var(--disp);font-size:42px;color:var(--orange);font-weight:400}
+.card h3{font-family:var(--disp);font-weight:400;letter-spacing:1.5px;text-transform:uppercase;
   font-size:19px;color:var(--orange);margin-bottom:6px}
 .card p{color:#d2d2d2;font-size:15.5px}
 
@@ -128,12 +128,12 @@ img{max-width:100%;display:block}
 }
 .trio .card h3{color:var(--paper);transition:color .15s}
 .trio .card:hover h3{color:var(--orange-lt)}
-.trio .card .big{font-family:var(--disp);font-size:34px;color:var(--orange);font-weight:700;margin-bottom:6px}
+.trio .card .big{font-family:var(--disp);font-size:34px;color:var(--orange);font-weight:400;margin-bottom:6px}
 
 /* ---- why pillars ---- */
 .why{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
 .why .item{border-left:3px solid var(--orange);padding:4px 0 4px 20px}
-.why h3{font-family:var(--disp);font-weight:600;letter-spacing:1px;text-transform:uppercase;
+.why h3{font-family:var(--disp);font-weight:400;letter-spacing:1px;text-transform:uppercase;
   font-size:17px;margin-bottom:8px}
 .why p{color:#cccccc;font-size:16px}
 
@@ -142,10 +142,10 @@ img{max-width:100%;display:block}
   background:var(--ink-card);border:1px solid var(--line);border-radius:14px;
   padding:30px;margin-bottom:18px;
 }
-.product .tag{font-family:var(--disp);font-weight:600;letter-spacing:2px;text-transform:uppercase;
+.product .tag{font-family:var(--disp);font-weight:400;letter-spacing:2px;text-transform:uppercase;
   color:var(--orange);font-size:13px;margin-bottom:6px}
 .product-logo{height:36px;width:auto;margin-bottom:14px}
-.product h3{font-family:var(--disp);font-weight:700;font-size:22px;text-transform:uppercase;margin-bottom:10px}
+.product h3{font-family:var(--disp);font-weight:400;font-size:22px;text-transform:uppercase;margin-bottom:10px}
 
 /* per-app brand colors (sampled from the app logos) */
 .c-pro{color:#F87010}
@@ -159,7 +159,7 @@ img{max-width:100%;display:block}
 .product .feat{color:var(--mute);font-size:15px}
 .product .feat strong{color:#e6e6e6}
 
-.subhead{font-family:var(--disp);font-weight:600;letter-spacing:2px;text-transform:uppercase;
+.subhead{font-family:var(--disp);font-weight:400;letter-spacing:2px;text-transform:uppercase;
   color:var(--mute);font-size:14px;text-align:center;margin:48px 0 22px}
 
 /* ---- final cta band ---- */
@@ -167,7 +167,7 @@ img{max-width:100%;display:block}
   text-align:center;padding:64px 24px;
   background:linear-gradient(120deg,var(--orange-deep),var(--orange) 55%,var(--orange-lt));
 }
-.cta-band h2{font-family:var(--disp);font-weight:700;color:var(--ink);text-transform:uppercase;
+.cta-band h2{font-family:var(--disp);font-weight:400;color:var(--ink);text-transform:uppercase;
   font-size:clamp(26px,4vw,40px);margin-bottom:22px}
 .cta-band .btn-dark{background:var(--ink);color:var(--paper);font-size:16px;padding:15px 32px}
 .cta-band .btn-dark:hover{background:#000;transform:translateY(-2px)}
