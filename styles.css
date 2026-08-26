@@ -23,9 +23,9 @@
    ===================================================================== */
 :root{
   --photo-hero-home:     url('images/football.webp');    /* index: hero */
-  --photo-what-home:     url('images/turf3.webp');       /* index: what it does */
-  --photo-steps-home:    url('images/turf4.webp');       /* index: 1-2-3 quick links */
+  --photo-what-home:     url('images/turf3.webp');       /* index: what it does + quick links */
   --photo-contact-home:  url('images/empty-seats.webp'); /* index: contact */
+  /* spare, currently unused: images/turf4.webp */
   --photo-hero-details:  url('images/basketball.webp');  /* details: hero */
   --photo-why-details:   url('images/baseball.webp');    /* details: why PBT */
   --photo-allinone-details: url('images/turf1.webp');    /* details: all-in-one (PRO/LITE) */
@@ -145,14 +145,6 @@ img{max-width:100%;display:block}
     var(--photo-what-home);
   background-position:center;
 }
-/* index: 1-2-3 quick links — curved turf line */
-.photo-steps-home.bg-ready{
-  background-image:
-    linear-gradient(180deg,rgba(var(--shade),.8),rgba(var(--shade),.55) 50%,rgba(var(--shade),.8)),
-    linear-gradient(rgba(var(--shade),.45),rgba(var(--shade),.45)),
-    var(--photo-steps-home);
-  background-position:center;
-}
 /* index: contact — empty stadium seats */
 .photo-contact-home.bg-ready{
   background-image:
@@ -214,14 +206,15 @@ img{max-width:100%;display:block}
 /* floating panels over photos */
 .photo-bg .card,
 .photo-bg .product{background:var(--panel);border-color:rgba(255,255,255,.08)}
-.photo-bg .trio .card:hover{background:rgba(26,33,56,.96)}
+.photo-bg .feature-panel{background:var(--panel);border-color:rgba(255,255,255,.08)}
 .photo-bg .why .item{
   background:var(--panel);border-radius:12px;
   padding:22px 24px;border-left:3px solid var(--orange);
 }
 .wrap.panel{
   background:var(--panel);border:1px solid rgba(255,255,255,.08);
-  border-radius:12px;max-width:720px;padding:44px 40px;
+  border-radius:12px;padding:44px 40px;
+  width:calc(100% - 48px);max-width:1032px; /* aligns with cards inside a .wrap */
 }
 .eyebrow{
   font-family:var(--disp);font-weight:400;letter-spacing:3px;text-transform:uppercase;
@@ -248,19 +241,31 @@ img{max-width:100%;display:block}
   font-size:.875rem;color:var(--orange);margin-bottom:6px}
 .card p{color:#d2d2d2;font-size:.9rem;line-height:1.5}
 
-/* ---- three quick links (home) ---- */
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+/* single panel holding all four feature blurbs */
+.feature-panel{
+  background:var(--ink-card);border:1px solid var(--line);border-radius:12px;
+  padding:16px;
+}
+.feature-panel .cards{gap:0}
+.feature-panel .card{background:transparent;border:0;padding:18px 20px}
+
+/* ---- three quick links (home) — styled as buttons ---- */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
 .trio .card{
   flex-direction:column;text-align:center;align-items:center;
-  transition:transform .15s, border-color .15s, background .15s, box-shadow .15s;
+  border:2px solid var(--orange);border-radius:10px;
+  transition:transform .15s, background .15s, box-shadow .15s;
 }
 .trio .card:hover{
-  transform:translateY(-4px);border-color:var(--orange);background:#262626;
-  box-shadow:0 8px 24px rgba(242,106,27,.18);
+  transform:translateY(-4px);background:var(--orange);
+  box-shadow:0 8px 24px rgba(242,106,27,.35);
 }
 .trio .card h3{color:var(--paper);transition:color .15s}
-.trio .card:hover h3{color:var(--orange-lt)}
-.trio .card .big{font-family:var(--disp);font-size:34px;color:var(--orange);font-weight:400;margin-bottom:6px}
+.trio .card p{transition:color .15s}
+.trio .card .big{font-family:var(--disp);font-size:34px;color:var(--orange);font-weight:400;margin-bottom:6px;transition:color .15s}
+.trio .card:hover h3,
+.trio .card:hover p,
+.trio .card:hover .big{color:var(--ink)}
 
 /* ---- why pillars ---- */
 .why{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
@@ -303,7 +308,7 @@ img{max-width:100%;display:block}
 
 /* ---- mascot & main promo ---- */
 .mm-promo{
-  background:#F6F1E7;border-radius:14px;padding:40px;max-width:960px;margin:0 auto;
+  background:#F6F1E7;border-radius:14px;padding:40px;margin:0 auto;
   display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;
 }
 .mm-logo{width:100%;max-width:440px;height:auto}
@@ -346,7 +351,7 @@ img{max-width:100%;display:block}
   .cards,.trio,.why{grid-template-columns:1fr}
   .hero.photo-bg{padding:84px 20px 72px}
   .section.photo-bg{padding:60px 0}
-  .wrap.panel{width:calc(100% - 32px);padding:32px 20px}
+  .wrap.panel{width:calc(100% - 48px);padding:32px 20px}
   .photo-bg .product{padding:24px 20px}
   .photo-bg .why .item{padding:18px 18px 18px 20px}
 }
