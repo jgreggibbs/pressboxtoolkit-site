@@ -17,6 +17,7 @@
 <meta name="twitter:image" content="https://www.pressboxtoolkit.com/og-image.png">
 <link rel="canonical" href="https://www.pressboxtoolkit.com/">
 <link rel="icon" href="public/PBT-favicon.png">
+<link rel="preload" as="image" href="images/football.webp" type="image/webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,14 +69,14 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero photo-bg photo-hero-home">
   <img class="hero-logo" src="PBT-logo-white.png" alt="Press Box Toolkit">
   <h1>Run <span class="accent">game day</span> like a pro</h1>
   <p class="sub">An intuitive platform to manage rosters, sponsors, audio, and more — so every game is executed flawlessly.</p>
 </section>
 
 <!-- WHAT IT DOES -->
-<section class="section alt">
+<section class="section alt photo-bg photo-what-home">
   <div class="wrap">
     <p class="eyebrow">What it does</p>
     <h2>One system to run the whole press box</h2>
@@ -102,7 +103,7 @@
 </section>
 
 <!-- THREE QUICK LINKS -->
-<section class="section">
+<section class="section photo-bg photo-steps-home">
   <div class="wrap">
     <div class="trio">
       <a class="card" href="details.html">
@@ -125,8 +126,8 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section alt" id="contact">
-  <div class="wrap">
+<section class="section alt photo-bg photo-contact-home" id="contact">
+  <div class="wrap panel">
     <p class="eyebrow">Contact</p>
     <h2>Questions or feedback?</h2>
     <p class="lede">Thanks for your interest in Press Box Toolkit. Send us a message and we'll be in touch shortly.</p>
@@ -150,6 +151,21 @@
     <p class="small" style="margin-top:10px">© 2026 Press Box Toolkit LLC</p>
   </div>
 </footer>
+
+<!-- Lazy-load below-the-fold photo backgrounds (heroes load eagerly via CSS) -->
+<script>
+(function(){
+  var els=document.querySelectorAll('.photo-bg:not(.hero)');
+  function ready(el){el.classList.add('bg-ready')}
+  if(!('IntersectionObserver' in window)){els.forEach(ready);return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ready(e.target);io.unobserve(e.target)}
+    });
+  },{rootMargin:'300px 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b8021b3f15eb4852a999a859407222bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

@@ -15,6 +15,33 @@
   --body:'DM Sans',system-ui,-apple-system,sans-serif;
 }
 
+/* =====================================================================
+   PHOTO BACKGROUNDS — swap image files here.
+   Each variable maps one image to one section; the .photo-* rules in
+   the "photo-backed sections" block below consume them.
+   (football and empty-seats appear once per page; no repeats within a page)
+   ===================================================================== */
+:root{
+  --photo-hero-home:     url('images/football.webp');    /* index: hero */
+  --photo-what-home:     url('images/turf3.webp');       /* index: what it does */
+  --photo-steps-home:    url('images/turf4.webp');       /* index: 1-2-3 quick links */
+  --photo-contact-home:  url('images/empty-seats.webp'); /* index: contact */
+  --photo-hero-details:  url('images/basketball.webp');  /* details: hero */
+  --photo-why-details:   url('images/baseball.webp');    /* details: why PBT */
+  --photo-allinone-details: url('images/turf1.webp');    /* details: all-in-one (PRO/LITE) */
+  --photo-tools-details: url('images/turf2.webp');       /* details: individual tools */
+  --photo-beyond-details: url('images/empty-seats.webp');/* details: beyond the press box */
+  --photo-ideas-details: url('images/football.webp');    /* details: what should we build next */
+  --shade:5,8,15;             /* rgb of the photo darkening overlay */
+  --panel:rgba(18,23,40,.94); /* floating panel background over photos */
+  /* per-app accent colors (details product cards) */
+  --acc-lite:#4A9EDE;
+  --acc-pro:#F26A1B;
+  --acc-pa:#E8B84B;
+  --acc-dj:#3EC6C6;
+  --acc-rm:#4CAF7A;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -91,6 +118,111 @@ img{max-width:100%;display:block}
 /* ---- section scaffolding ---- */
 .section{padding:72px 0}
 .section.alt{background:var(--ink-soft)}
+
+/* ---- photo-backed sections ----
+   Non-hero .photo-bg sections keep their flat background until the
+   inline IntersectionObserver adds .bg-ready (heroes load eagerly).
+   Every photo gets a base darkening layer plus a stronger gradient
+   behind the text zone so copy never sits on raw photo. */
+.photo-bg{background-size:cover;background-repeat:no-repeat;background-attachment:scroll}
+.section.photo-bg{padding:88px 0}
+.hero.photo-bg{padding:120px 24px 104px}
+
+/* index: hero — football under the lights */
+.photo-hero-home{
+  background-image:
+    radial-gradient(ellipse 62% 58% at 50% 52%,rgba(var(--shade),.55),transparent 74%),
+    linear-gradient(180deg,rgba(var(--shade),.66),rgba(var(--shade),.46) 45%,rgba(var(--shade),.8)),
+    linear-gradient(rgba(var(--shade),.42),rgba(var(--shade),.42)),
+    var(--photo-hero-home);
+  background-position:center 28%;
+}
+/* index: what it does — turf T-line junction */
+.photo-what-home.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.82),rgba(var(--shade),.58) 45%,rgba(var(--shade),.78)),
+    linear-gradient(rgba(var(--shade),.45),rgba(var(--shade),.45)),
+    var(--photo-what-home);
+  background-position:center;
+}
+/* index: 1-2-3 quick links — curved turf line */
+.photo-steps-home.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.8),rgba(var(--shade),.55) 50%,rgba(var(--shade),.8)),
+    linear-gradient(rgba(var(--shade),.45),rgba(var(--shade),.45)),
+    var(--photo-steps-home);
+  background-position:center;
+}
+/* index: contact — empty stadium seats */
+.photo-contact-home.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.6),rgba(var(--shade),.42) 45%,rgba(var(--shade),.72)),
+    linear-gradient(rgba(var(--shade),.35),rgba(var(--shade),.35)),
+    var(--photo-contact-home);
+  background-position:center 65%;
+}
+/* details: hero — basketball dropping through the net */
+.photo-hero-details{
+  background-image:
+    radial-gradient(ellipse 62% 58% at 50% 52%,rgba(var(--shade),.5),transparent 74%),
+    linear-gradient(180deg,rgba(var(--shade),.58),rgba(var(--shade),.42) 45%,rgba(var(--shade),.76)),
+    linear-gradient(rgba(var(--shade),.36),rgba(var(--shade),.36)),
+    var(--photo-hero-details);
+  background-position:32% center;
+}
+/* details: individual tools — turf sideline */
+.photo-tools-details.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.82),rgba(var(--shade),.58) 45%,rgba(var(--shade),.78)),
+    linear-gradient(rgba(var(--shade),.45),rgba(var(--shade),.45)),
+    var(--photo-tools-details);
+  background-position:center;
+}
+/* details: all-in-one — soccer ball on grass */
+.photo-allinone-details.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.8),rgba(var(--shade),.55) 45%,rgba(var(--shade),.78)),
+    linear-gradient(rgba(var(--shade),.42),rgba(var(--shade),.42)),
+    var(--photo-allinone-details);
+  background-position:72% center;
+}
+/* details: beyond the press box — empty stadium seats */
+.photo-beyond-details.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.76),rgba(var(--shade),.52) 45%,rgba(var(--shade),.74)),
+    linear-gradient(rgba(var(--shade),.38),rgba(var(--shade),.38)),
+    var(--photo-beyond-details);
+  background-position:center 65%;
+}
+/* details: what should we build next — football under the lights */
+.photo-ideas-details.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.62),rgba(var(--shade),.45) 45%,rgba(var(--shade),.72)),
+    linear-gradient(rgba(var(--shade),.4),rgba(var(--shade),.4)),
+    var(--photo-ideas-details);
+  background-position:center 28%;
+}
+/* details: why PBT — glove and baseballs at dusk */
+.photo-why-details.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.78),rgba(var(--shade),.5) 40%,rgba(var(--shade),.72)),
+    linear-gradient(rgba(var(--shade),.4),rgba(var(--shade),.4)),
+    var(--photo-why-details);
+  background-position:center 60%;
+}
+
+/* floating panels over photos */
+.photo-bg .card,
+.photo-bg .product{background:var(--panel);border-color:rgba(255,255,255,.08)}
+.photo-bg .trio .card:hover{background:rgba(26,33,56,.96)}
+.photo-bg .why .item{
+  background:var(--panel);border-radius:12px;
+  padding:22px 24px;border-left:3px solid var(--orange);
+}
+.wrap.panel{
+  background:var(--panel);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;max-width:720px;padding:44px 40px;
+}
 .eyebrow{
   font-family:var(--disp);font-weight:400;letter-spacing:3px;text-transform:uppercase;
   color:var(--orange);font-size:13px;text-align:center;margin-bottom:12px;
@@ -147,14 +279,21 @@ img{max-width:100%;display:block}
 .product-logo{height:50px;width:auto;margin-bottom:14px}
 .product h3{font-family:var(--disp);font-weight:400;font-size:.875rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
 
-/* per-app brand colors (sampled from the app logos) */
-.c-pro{color:#F87010}
-.c-lite{color:#4070C0}
-.c-pa{color:#F8D800}
-.c-dj{color:#00B0D0}
+/* per-app brand colors (accent variables defined in the photo block) */
+.c-pro{color:var(--acc-pro)}
+.c-lite{color:var(--acc-lite)}
+.c-pa{color:var(--acc-pa)}
+.c-dj{color:var(--acc-dj)}
 .c-ad{color:#8858F0}
-.c-rm{color:#10B880}
+.c-rm{color:var(--acc-rm)}
 .c-bc{color:#20C058}
+
+/* thin per-app card accent (AD and BC stay neutral) */
+.product:has(.c-pro){border-left:3px solid var(--acc-pro)}
+.product:has(.c-lite){border-left:3px solid var(--acc-lite)}
+.product:has(.c-pa){border-left:3px solid var(--acc-pa)}
+.product:has(.c-dj){border-left:3px solid var(--acc-dj)}
+.product:has(.c-rm){border-left:3px solid var(--acc-rm)}
 .product p{color:#d2d2d2;font-size:.9rem;line-height:1.5;margin-bottom:10px}
 .product .feat{color:var(--mute);font-size:.85rem}
 .product .feat strong{color:#e6e6e6}
@@ -205,6 +344,11 @@ img{max-width:100%;display:block}
   .nav-links a.cta{border-radius:0}
   .nav-toggle{display:block}
   .cards,.trio,.why{grid-template-columns:1fr}
+  .hero.photo-bg{padding:84px 20px 72px}
+  .section.photo-bg{padding:60px 0}
+  .wrap.panel{width:calc(100% - 32px);padding:32px 20px}
+  .photo-bg .product{padding:24px 20px}
+  .photo-bg .why .item{padding:18px 18px 18px 20px}
 }
 
 @media(prefers-reduced-motion:reduce){

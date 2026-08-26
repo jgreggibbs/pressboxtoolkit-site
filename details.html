@@ -17,6 +17,7 @@
 <meta name="twitter:image" content="https://www.pressboxtoolkit.com/og-image.png">
 <link rel="canonical" href="https://www.pressboxtoolkit.com/details.html">
 <link rel="icon" href="public/PBT-favicon.png">
+<link rel="preload" as="image" href="images/basketball.webp" type="image/webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,13 +53,39 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero photo-bg photo-hero-details">
   <h1>Run <span class="accent">game day</span> like a pro</h1>
   <p class="sub">Whether you're a one-person operation or running a full press box crew, there's a tool for the job. Professional tools for PA announcers, DJs, and game-day staff — rosters, rundowns, audio, and sponsor reads, all in one place.</p>
 </section>
 
+<!-- WHY PBT -->
+<section class="section alt photo-bg photo-why-details">
+  <div class="wrap">
+    <p class="eyebrow">Why Press Box Toolkit?</p>
+    <h2>Built for how high school sports really work</h2>
+    <div class="why" style="margin-top:36px">
+      <div class="item">
+        <h3>Built for volunteer turnover</h3>
+        <p>High school sports run on volunteers — and volunteers change every few years. Press Box Toolkit keeps your institutional knowledge intact. When the current announcer moves on, the next parent inherits a complete system: rosters, rundown templates, sponsor scripts, and audio libraries ready to go. No more starting from scratch.</p>
+      </div>
+      <div class="item">
+        <h3>Sound like a pro</h3>
+        <p>Your fans deserve a great game-day experience. Press Box Toolkit helps you deliver polished announcements, perfectly-timed music, and consistent sponsor recognition — the same quality you'd hear at a college or pro venue. Make your program stand out.</p>
+      </div>
+      <div class="item">
+        <h3>Eliminate game-day chaos</h3>
+        <p>No more shuffling through papers for the roster. No more forgetting which sponsor to read at halftime. No more scrambling for the right sound effect. Everything is organized, accessible, and ready when you need it.</p>
+      </div>
+      <div class="item">
+        <h3>Works when WiFi doesn't</h3>
+        <p>Press boxes aren't known for great internet. That's why the core of Press Box Toolkit runs in your browser — your data and audio stay on your device, so a weak signal on game day doesn't stop the show.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ALL-IN-ONE PRODUCTS -->
-<section class="section alt">
+<section class="section alt photo-bg photo-allinone-details">
   <div class="wrap">
     <p class="eyebrow">All-in-one</p>
     <h2>Two ways to run the whole show</h2>
@@ -81,7 +108,7 @@
 </section>
 
 <!-- INDIVIDUAL TOOLS -->
-<section class="section">
+<section class="section photo-bg photo-tools-details">
   <div class="wrap">
     <p class="eyebrow">Prefer individual tools?</p>
     <h2>Pick exactly what you need</h2>
@@ -111,7 +138,7 @@
 </section>
 
 <!-- BEYOND THE PRESS BOX -->
-<section class="section alt">
+<section class="section alt photo-bg photo-beyond-details">
   <div class="wrap">
     <p class="eyebrow">Beyond the press box</p>
     <h2>Tools for the program behind the game</h2>
@@ -145,39 +172,13 @@
 </section>
 
 <!-- IDEAS / FEATURE SUGGESTIONS -->
-<section class="section">
-  <div class="wrap">
+<section class="section photo-bg photo-ideas-details">
+  <div class="wrap panel">
     <p class="eyebrow">What should we build next?</p>
     <h2>Have an idea for the next tool?</h2>
     <p class="lede">Press Box Toolkit is growing, and many of our best ideas come straight from the people who live in the press box. Whether it's a small time-saver or a big idea that could transform your workflow, your input shapes what we build next. Your suggestion could become the next PBT tool.</p>
     <div style="text-align:center">
       <a class="btn btn-primary" href="mailto:info@pressboxtoolkit.com?subject=Press%20Box%20Toolkit%20feature%20idea">Share an Idea</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY PBT -->
-<section class="section alt">
-  <div class="wrap">
-    <p class="eyebrow">Why Press Box Toolkit?</p>
-    <h2>Built for how high school sports really work</h2>
-    <div class="why" style="margin-top:36px">
-      <div class="item">
-        <h3>Built for volunteer turnover</h3>
-        <p>High school sports run on volunteers — and volunteers change every few years. Press Box Toolkit keeps your institutional knowledge intact. When the current announcer moves on, the next parent inherits a complete system: rosters, rundown templates, sponsor scripts, and audio libraries ready to go. No more starting from scratch.</p>
-      </div>
-      <div class="item">
-        <h3>Sound like a pro</h3>
-        <p>Your fans deserve a great game-day experience. Press Box Toolkit helps you deliver polished announcements, perfectly-timed music, and consistent sponsor recognition — the same quality you'd hear at a college or pro venue. Make your program stand out.</p>
-      </div>
-      <div class="item">
-        <h3>Eliminate game-day chaos</h3>
-        <p>No more shuffling through papers for the roster. No more forgetting which sponsor to read at halftime. No more scrambling for the right sound effect. Everything is organized, accessible, and ready when you need it.</p>
-      </div>
-      <div class="item">
-        <h3>Works when WiFi doesn't</h3>
-        <p>Press boxes aren't known for great internet. That's why the core of Press Box Toolkit runs in your browser — your data and audio stay on your device, so a weak signal on game day doesn't stop the show.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -202,6 +203,21 @@
     <p class="small" style="margin-top:10px">© 2026 Press Box Toolkit LLC</p>
   </div>
 </footer>
+
+<!-- Lazy-load below-the-fold photo backgrounds (heroes load eagerly via CSS) -->
+<script>
+(function(){
+  var els=document.querySelectorAll('.photo-bg:not(.hero)');
+  function ready(el){el.classList.add('bg-ready')}
+  if(!('IntersectionObserver' in window)){els.forEach(ready);return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ready(e.target);io.unobserve(e.target)}
+    });
+  },{rootMargin:'300px 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b8021b3f15eb4852a999a859407222bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
