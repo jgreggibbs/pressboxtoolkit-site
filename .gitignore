@@ -1,0 +1,5 @@
+# Source photos — only the converted .webp files are used by the site
+images/*.png
+
+# Local Claude Code session config
+.claude/
