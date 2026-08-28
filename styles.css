@@ -60,7 +60,7 @@ img{max-width:100%;display:block}
 /* ---- nav ---- */
 .nav{
   position:sticky;top:0;z-index:50;
-  background:rgba(18,18,18,.92);
+  background:rgba(18,18,18,.65);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
@@ -126,6 +126,11 @@ img{max-width:100%;display:block}
    behind the text zone so copy never sits on raw photo. */
 .photo-bg{background-size:cover;background-repeat:no-repeat;background-attachment:scroll}
 .section.photo-bg{padding:88px 0}
+/* sections that absorb the footer so the photo runs behind it */
+.section.photo-bg.has-foot{padding-bottom:0}
+.has-foot .foot{margin-top:88px}
+.has-foot .cta-band{margin-top:88px}
+.has-foot .cta-band + .foot{margin-top:0}
 .hero.photo-bg{padding:120px 24px 104px}
 
 /* index: hero — football under the lights */
