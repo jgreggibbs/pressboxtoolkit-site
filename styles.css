@@ -117,7 +117,9 @@ img{max-width:100%;display:block}
 
 /* ---- section scaffolding ---- */
 .section{padding:72px 0}
-.section.alt{background:var(--ink-soft)}
+/* background-color, not the `background` shorthand: the shorthand would reset
+   background-size/repeat and beat .photo-bg's `cover` on .section.alt.photo-bg */
+.section.alt{background-color:var(--ink-soft)}
 
 /* ---- photo-backed sections ----
    Non-hero .photo-bg sections keep their flat background until the
