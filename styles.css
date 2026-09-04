@@ -24,8 +24,8 @@
 :root{
   --photo-hero-home:     url('images/football.webp');    /* index: hero */
   --photo-what-home:     url('images/turf3.webp');       /* index: what it does + quick links */
+  --photo-users-home:    url('images/turf4.webp');       /* index: where we are (user map) */
   --photo-contact-home:  url('images/empty-seats.webp'); /* index: contact */
-  /* spare, currently unused: images/turf4.webp */
   --photo-hero-details:  url('images/basketball.webp');  /* details: hero */
   --photo-why-details:   url('images/baseball.webp');    /* details: why PBT */
   --photo-allinone-details: url('images/turf1.webp');    /* details: all-in-one (PRO/LITE) */
@@ -160,6 +160,14 @@ img{max-width:100%;display:block}
     var(--photo-contact-home);
   background-position:center 65%;
 }
+/* index: where we are — turf close-up */
+.photo-users-home.bg-ready{
+  background-image:
+    linear-gradient(180deg,rgba(var(--shade),.82),rgba(var(--shade),.6) 45%,rgba(var(--shade),.8)),
+    linear-gradient(rgba(var(--shade),.45),rgba(var(--shade),.45)),
+    var(--photo-users-home);
+  background-position:center;
+}
 /* details: hero — basketball dropping through the net */
 .photo-hero-details{
   background-image:
@@ -222,6 +230,13 @@ img{max-width:100%;display:block}
   background:var(--panel);border:1px solid rgba(255,255,255,.08);
   border-radius:12px;padding:44px 40px;
   width:calc(100% - 48px);max-width:1032px; /* aligns with cards inside a .wrap */
+}
+/* user map (home): tighter panel so the map fills the width */
+.wrap.panel.map-panel{padding:28px 28px 20px}
+.map-panel img{width:100%;height:auto;display:block}
+.map-caption{
+  text-align:center;color:var(--mute);font-size:.85rem;
+  margin-top:16px;
 }
 .eyebrow{
   font-family:var(--disp);font-weight:400;letter-spacing:3px;text-transform:uppercase;
@@ -363,6 +378,7 @@ img{max-width:100%;display:block}
   .hero.photo-bg{padding:84px 20px 72px}
   .section.photo-bg{padding:60px 0}
   .wrap.panel{width:calc(100% - 48px);padding:32px 20px}
+  .wrap.panel.map-panel{padding:16px 12px 14px}
   .photo-bg .product{padding:24px 20px}
   .photo-bg .why .item{padding:18px 18px 18px 20px}
 }
