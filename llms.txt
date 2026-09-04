@@ -16,7 +16,7 @@ Press Box Toolkit runs in the browser and keeps data and audio on the user's dev
 
 ## Pages
 
-- [Home](https://www.pressboxtoolkit.com/): Overview and contact.
+- [Home](https://www.pressboxtoolkit.com/): Overview, a map of where users are (24 states), and contact.
 - [Learn More](https://www.pressboxtoolkit.com/details.html): Full product family details.
 - [App](https://app.pressboxtoolkit.com): Create an account and try Press Box Toolkit.
 
