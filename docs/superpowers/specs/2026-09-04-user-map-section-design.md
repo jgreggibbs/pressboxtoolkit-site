@@ -20,7 +20,7 @@ New section on `index.html` between the "What it does" section and the Contact s
 - Heading: "Press boxes in 24 states"
 - Lede: one sentence along the lines of "From Friday night football in Georgia to hoops in Oregon, crews across the country run game day on Press Box Toolkit."
 - Map in a floating panel that matches the existing `.wrap.panel` style.
-- Caption under the map: "Each dot is a city with Press Box Toolkit users. Darker states have more."
+- Caption under the map: "Each dot is a city with Press Box Toolkit users. Brighter orange states have more."
 - Not included: swatch legend, state bar list, account total, footnote.
 
 ## Map asset

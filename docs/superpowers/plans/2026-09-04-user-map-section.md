@@ -196,7 +196,7 @@ and replace with:
   </div>
   <div class="wrap panel map-panel">
     <img src="images/user-map.svg" width="1031" height="612" loading="lazy" alt="Map of the United States with orange dots marking cities where Press Box Toolkit is used, concentrated in the Southeast and Midwest">
-    <p class="map-caption">Each dot is a city with Press Box Toolkit users. Darker states have more.</p>
+    <p class="map-caption">Each dot is a city with Press Box Toolkit users. Brighter orange states have more.</p>
   </div>
 </section>
 
