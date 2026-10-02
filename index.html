@@ -82,6 +82,29 @@
   <p class="sub">An intuitive platform to manage rosters, sponsors, audio, and more — so every game is executed flawlessly.</p>
 </section>
 
+<!-- BRAND VIDEO -->
+<section class="brand-video" aria-labelledby="brand-video-title">
+  <div class="wrap">
+    <h2 id="brand-video-title">See game night through the press box window.</h2>
+    <div class="video-frame">
+      <video id="brand-video" muted playsinline loop preload="none" controls width="1920" height="1080"
+        poster="images/PBT-Spot-16x9-poster.jpg"
+        aria-label="Press Box Toolkit brand video, 30 seconds. Stadium lights come on over high school football, basketball, baseball, and soccer as the PA calls each moment, then a volunteer at the press box mic runs the night from the Press Box Toolkit run of show. Ends on the logo, Run game day like a pro, and pressboxtoolkit.com.">
+        <source src="images/PBT-Spot-16x9-720.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source src="images/PBT-Spot-16x9-1080.webm" type="video/webm">
+        <source src="images/PBT-Spot-16x9-1080.mp4" type="video/mp4">
+      </video>
+      <button class="video-play" type="button" aria-label="Play video" hidden>
+        <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      <div class="video-controls">
+        <button class="video-btn video-pause" type="button">Pause</button>
+        <button class="video-btn video-sound" type="button">Sound on</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT IT DOES -->
 <section class="section alt photo-bg photo-what-home">
   <div class="wrap">
@@ -185,6 +208,56 @@
     });
   },{rootMargin:'300px 0px'});
   els.forEach(function(el){io.observe(el)});
+})();
+</script>
+
+<!-- Brand video: autoplay muted while on screen, pause when off screen.
+     Reduced motion: never autoplay; show the poster with a play button. -->
+<script>
+(function(){
+  var v=document.getElementById('brand-video');
+  if(!v)return;
+  var frame=v.parentNode,
+      playBtn=frame.querySelector('.video-play'),
+      pauseBtn=frame.querySelector('.video-pause'),
+      soundBtn=frame.querySelector('.video-sound'),
+      reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      userPaused=reduce; // reduced motion starts paused until the viewer asks to play
+
+  function sync(){
+    playBtn.hidden=!v.paused;
+    pauseBtn.hidden=v.paused; // the round play button takes over while paused
+  }
+  function play(){var p=v.play();if(p&&p.catch)p.catch(sync)}
+
+  v.controls=false; // native controls are only the no-JS fallback
+
+  v.addEventListener('play',sync);
+  v.addEventListener('pause',sync);
+
+  playBtn.addEventListener('click',function(){userPaused=false;play();pauseBtn.hidden=false;pauseBtn.focus()});
+  pauseBtn.addEventListener('click',function(){userPaused=true;v.pause();playBtn.hidden=false;playBtn.focus()});
+  soundBtn.addEventListener('click',function(){
+    v.muted=!v.muted;
+    soundBtn.textContent=v.muted?'Sound on':'Sound off';
+    if(!v.muted&&v.paused){userPaused=false;play()}
+  });
+
+  // preload starts as none and nothing is fetched until the page has loaded,
+  // so the video never competes with first paint or the hero image (LCP)
+  function start(){
+    if(!('IntersectionObserver' in window)){v.preload='metadata';if(!userPaused)play();return}
+    var near=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){v.preload='metadata';near.disconnect()}
+    },{rootMargin:'300px 0px'});
+    near.observe(v);
+    new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){if(!userPaused)play()}
+      else if(!v.paused)v.pause();
+    },{threshold:.5}).observe(v);
+  }
+  if(document.readyState==='complete')start();else window.addEventListener('load',start);
+  sync();
 })();
 </script>
 

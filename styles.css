@@ -1,5 +1,9 @@
 /* ===== Press Box Toolkit — landing site ===== */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* Brand video headline (Oswald) and controls (Barlow Semi Condensed), subset with text= to only the
+   glyphs used: 'See game night through the press box window.' plus 'Sound on/off', 'Pause', 'Play'.
+   Add any new characters here if that copy changes. */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Oswald:wght@600&display=swap&text=%20.PSabdefghilmnoprstuwxy');
 
 :root{
   --ink:#121212;
@@ -119,6 +123,43 @@ img{max-width:100%;display:block}
 .btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px)}
 .btn-ghost{border:1.5px solid var(--line);color:var(--paper)}
 .btn-ghost:hover{border-color:var(--orange);color:var(--orange-lt)}
+
+/* ---- brand video (home, below hero) ---- */
+.brand-video{background:#0A0A0A;padding:72px 0 80px}
+.brand-video h2{
+  font-family:'Oswald',var(--disp);font-weight:600;text-align:center;
+  font-size:clamp(1.5rem,3.6vw,2.375rem);line-height:1.15;margin-bottom:32px;
+  text-wrap:balance;
+}
+.video-frame{
+  position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);border-radius:12px;
+  box-shadow:0 18px 48px rgba(0,0,0,.55);
+}
+.video-frame video{display:block;width:100%;height:100%;object-fit:cover}
+.video-controls{position:absolute;right:14px;bottom:14px;display:flex;gap:8px}
+.video-btn{
+  font-family:'Barlow Semi Condensed',var(--body);font-weight:600;font-size:1rem;
+  min-height:44px;padding:0 16px;border-radius:8px;cursor:pointer;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(10,10,10,.72);color:var(--paper);
+  transition:background .15s;
+}
+.video-btn:hover{background:rgba(10,10,10,.9)}
+.video-sound{background:var(--orange);color:#0A0A0A;border-color:var(--orange)}
+.video-sound:hover{background:var(--orange-lt)}
+.video-btn:focus-visible,.video-play:focus-visible{outline:3px solid var(--paper);outline-offset:2px}
+/* bottom-left so it never covers the logo and URL on the end-card poster */
+.video-play{
+  position:absolute;left:14px;bottom:14px;
+  width:64px;height:64px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--orange);color:#0A0A0A;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(0,0,0,.5);
+}
+.video-play[hidden],.video-btn[hidden]{display:none}
+.video-play svg{margin-left:4px}
+.video-play:hover{background:var(--orange-lt)}
 
 /* ---- section scaffolding ---- */
 .section{padding:72px 0}
@@ -389,6 +430,12 @@ img{max-width:100%;display:block}
   .wrap.panel.map-panel{padding:16px 12px 14px}
   .photo-bg .product{padding:24px 20px}
   .photo-bg .why .item{padding:18px 18px 18px 20px}
+  .brand-video{padding:56px 0 60px}
+  .brand-video h2{margin-bottom:24px}
+  .video-controls{right:10px;bottom:10px;gap:6px}
+  .video-btn{min-height:40px;padding:0 12px;font-size:.9375rem}
+  .video-play{left:10px;bottom:10px;width:48px;height:48px}
+  .video-play svg{width:24px;height:24px}
 }
 @media(max-width:560px){
   .hero-brand{flex-direction:column;gap:14px}
