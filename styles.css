@@ -157,7 +157,7 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 24px rgba(0,0,0,.5);
 }
-.video-play[hidden],.video-btn[hidden]{display:none}
+.video-play[hidden],.video-controls[hidden]{display:none}
 .video-play svg{margin-left:4px}
 .video-play:hover{background:var(--orange-lt)}
 
